@@ -6,7 +6,7 @@ fn main() {
     let http_result = http_client.get("https://trevorsullivan.net/").send();
 
     if http_result.is_ok() {
-        //println!("Body: {:#?}", http_result.ok().unwrap().text().unwrap());
+        println!("Body: {:#?}", http_result.ok().unwrap().text().unwrap());
     } else if http_result.is_err() {
         println!("Error: {:#?}", http_result.err());
     }
@@ -16,7 +16,7 @@ fn main() {
         .header("User-Agent", "Rale Rust Http Client").send();
 
     if post_result.is_ok() {
-        //println!("{:#?}", post_result.ok().unwrap().text().unwrap());
+        println!("{:#?}", post_result.ok().unwrap().text().unwrap());
     } else if post_result.is_err() {
         println!("Error: {:#?}", post_result.err());
     }
